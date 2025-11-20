@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Fan.png">
+    <title>Hover Button</title>
+</head>
+<body>
+
+    <div class="fan-container">
+        <img src="./Fan.png" alt="Fan" class="fan" id="fan">
+    </div>
+
+
+    <div class="container">
+
+        <div class="button-container">
+            <input type="button" value="Fanspin.com" class="button" id="button">
+        </div>
+        <div class="outside" id="outside"></div>
+
+        <div class="transparent" id="transparent"></div>
+
+        <div class="gradient-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHN_uskNdpA2BiCdvui-nXNmyqxkMNMg6zJ9cvR_34ofls-X1SsLUjJp0qu05A1tJ2zm0&usqp=CAU" alt="gradient" class="gradient1" id="gradient">
+
+        </div>
+            
+
+    </div>
+    <script>
+    const btn = document.getElementById("button");
+    const outside = document.getElementById("outside");
+    const yeah = document.getElementById("fan");
+    btn.addEventListener("mousedown", () => {
+        btn.classList.add("press");
+        outside.classList.add("press");
+        yeah.classList.add("yeah")
+    });
+
+    btn.addEventListener("mouseup", () => {
+        btn.classList.remove("press");
+        outside.classList.remove("press");
+        yeah.classList.remove("yeah")
+    });
+
+    btn.addEventListener("mouseleave", () => {
+        btn.classList.remove("press");
+        outside.classList.remove("press");
+        yeah.classList.remove("yeah")
+    });
+
+</script>
+
+</body>
+</html>
